@@ -4,6 +4,10 @@ swts
 
 Typescript Dev Compiler for ServiceWorker and ES6 Modules Era.
 
+## Examples
+
+[https://brn.github.io/swts/](https://brn.github.io/swts/)
+
 ## Install
 
 ```
@@ -18,7 +22,7 @@ cp node_modules/swts/sw.js ./
 ```html
 <script src="path to swts/index.js"></script>
 <script>
-  swts.register({serviceWorkerPath: '/sw.js', src: './src', entry: 'index.ts'});
+  swts.register({serviceWorkerPath: '/sw.js', src: './src', entry: 'index.ts', scope: '/'});
 </script>
 ```
 
@@ -27,7 +31,7 @@ cp node_modules/swts/sw.js ./
 ```javascript
 import swts from 'swts';
 
-swts.register({serviceWorkerPath: '/sw.js', src: './src', entry: 'index.ts'});
+swts.register({serviceWorkerPath: '/sw.js', src: './src', entry: 'index.ts', scope: '/'});
 ```
 
 ### For typescript
@@ -36,17 +40,21 @@ Use swts.d.ts
 
 ### Options
 
-**serviceWorkerPath: string**
+**serviceWorkerPath: string** *required*
 
 Path to swts/sw.js.
 
-**src**
+**src** *required*
 
 Path to the root directory of typescript source files.
 
-**entry**
+**entry** *required*
 
 Entry module file name.
+
+**scope** *optional* __default__ '/'
+
+ServiceWorker scope.
 
 
 ## Contribution
