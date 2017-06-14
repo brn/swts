@@ -1,6 +1,6 @@
 {
   "name": "swts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Typescript Dev Compiler for ServiceWorker and ES6 Modules Era.",
   "keywords": "ES6 Modules ServiceWorker Typescript",
   "main": "index.js",

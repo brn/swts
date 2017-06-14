@@ -58,6 +58,9 @@ Entry module file name.
 
 ServiceWorker scope.
 
+**tsconfig** *optional* __default__ '/tsconfig.json'
+
+Path to the tsconfig.json
 
 ## Contribution
 

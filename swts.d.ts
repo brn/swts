@@ -10,6 +10,7 @@ declare module 'swts' {
     src: string;
     entry: string;
     scope?: string;
+    tsconfig?: string;
   }
 
   interface SWTS {

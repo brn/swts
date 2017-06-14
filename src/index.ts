@@ -14,6 +14,7 @@ interface SWTSOptions {
   src: string;
   entry: string;
   scope: string;
+  tsconfig?: string;
 }
 
 
@@ -38,7 +39,7 @@ class SWTS {
         }
       };
       const normalizedSrc = normalizePath(`${PATH_PREFIX}/${options.src}`);
-      navigator.serviceWorker.controller.postMessage({type: 'LOAD_TSCONFIG', src: normalizedSrc}, [messageChannel.port2]);
+      navigator.serviceWorker.controller.postMessage({type: 'LOAD_TSCONFIG', src: normalizedSrc, tsconfig: options.tsconfig}, [messageChannel.port2]);
     })
   }
 }

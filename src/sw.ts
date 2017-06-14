@@ -56,7 +56,7 @@ global.addEventListener('activate', (event: SWEvent) => {
 
 global.addEventListener('message', async event => {
   if (event.data && event.data.type === 'LOAD_TSCONFIG') {
-    const [ok, content] = await readFile(TSCONFIG);
+    const [ok, content] = await readFile(event.data.tsconfig || TSCONFIG);
     if (ok) {
       tsconfig = JSON.parse(content);
       if (!tsconfig.compilerOptions) {
