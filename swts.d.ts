@@ -9,6 +9,8 @@ declare module 'swts' {
     serviceWorkerPath: string;
     src: string;
     entry: string;
+    scope?: string;
+    tsconfig?: string;
   }
 
   interface SWTS {
