@@ -13,6 +13,7 @@ interface SWTSOptions {
   serviceWorkerPath: string;
   src: string;
   entry: string;
+  scope: string;
 }
 
 
@@ -22,7 +23,7 @@ class SWTS {
     const CONTROLLER_CHANGE_PROMISE = new Promise(resolve => {
       navigator.serviceWorker.addEventListener('controllerchange', resolve);
     });
-    navigator.serviceWorker.register('sw.js', {scope: '/'}).then(r => {
+    navigator.serviceWorker.register('sw.js', {scope: options.scope || '/'}).then(r => {
       if (r.active && r.active.state === 'activated') {
         return;
       }
