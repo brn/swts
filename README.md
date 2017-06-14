@@ -6,6 +6,8 @@ Typescript Dev Compiler for ServiceWorker and ES6 Modules Era.
 
 ## Examples
 
+*Now only works with Google Chrome Canary.*
+
 [https://brn.github.io/swts/](https://brn.github.io/swts/)
 
 ## Install
